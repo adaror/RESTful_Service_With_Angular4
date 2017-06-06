@@ -1,0 +1,20 @@
+h2{
+  font-size: 40px;
+  color:#2e6da4;
+  font-weight: bold;
+  text-align: center;
+}
+
+ul li{
+  background: #d9d9d9;
+  border: 2px solid #3c3c3c;
+}
+
+.category{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.category span{
+  font-weight: 100;
+}

@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-5 col-md-offset-3">
+    <h2>All Record Series List:</h2>
+    <ul class="list-group">
+      <li class="list-group-item"
+          *ngFor="let record of recordSeries">
+        <p class="category">The Id Is: <span>{{record.id}}</span></p>
+        <p class="category">Series Name: <span>{{record.seriesName}}</span></p>
+        <p class="category">Channel: <span>{{record.channel}}</span></p>
+        <p class="category">Category: <span>{{record.category}}</span></p>
+        <p class="category"> Season: <span>{{record.season}}</span></p>
+      </li>
+    </ul>
+  </div>
+</div>
