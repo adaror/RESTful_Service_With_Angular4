@@ -12,14 +12,13 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active hvr-pulse"><a href="#">Show All Records <span class="sr-only">(current)</span></a></li>
-        <li><a href="#" class="hvr-pulse">Looking by name</a></li>
-        <li><a href="#" class="hvr-pulse">Looking by channel and category</a></li>
+        <li routerLinkActive="active" class="hvr-pulse"><a routerLink="/record-list">Show All Records <span class="sr-only">(current)</span></a></li>
+        <li routerLinkActive="active"><a routerLink="/series-by-name" class="hvr-pulse">Looking by name</a></li>
+        <li routerLinkActive="active"><a routerLink="/series-by-channel" class="hvr-pulse">Looking by channel and category</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 <div class="container">
-  <app-record-list></app-record-list>
-<app-series-by-name></app-series-by-name>
+  <router-outlet></router-outlet>
 </div>

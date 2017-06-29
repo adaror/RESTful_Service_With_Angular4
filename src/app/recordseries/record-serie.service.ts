@@ -23,6 +23,13 @@ export class RecordSerieService {
                             .catch(this.handleError)
   }
 
+  findSeriesByChannel(param:object):Promise<RecordSerie[]>{
+    return this.http.post(this.recordUrl+'getSeries',param)
+      .toPromise()
+      .then(response => response.json() as RecordSerie[])
+      .catch(this.handleError)
+  }
+
   private handleError (error: any) {
     let errMsg = (error.message) ? error.message :
       error.status ? `${error.status} - ${error.statusText}` : 'Server error';

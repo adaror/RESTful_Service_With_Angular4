@@ -7,12 +7,10 @@ import {RecordSerieService} from '../record-serie.service';
   selector: 'app-record-list',
   templateUrl: './record-list.component.html',
   styleUrls: ['./record-list.component.css'],
-  providers:[RecordSerieService]
 })
 export class RecordListComponent implements OnInit {
 
   recordSeries:RecordSerie[];
-  parameters:object = {"name":"default","value":"default"};
   constructor(private recordSeriesService:RecordSerieService) { }
 
   ngOnInit() {

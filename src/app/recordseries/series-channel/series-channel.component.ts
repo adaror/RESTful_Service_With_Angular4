@@ -3,23 +3,24 @@ import {RecordSerie} from '../record-serie';
 import {RecordSerieService} from '../record-serie.service';
 
 @Component({
-  selector: 'app-series-by-name',
-  templateUrl: './series-by-name.component.html',
-  styleUrls: ['./series-by-name.component.css'],
+  selector: 'app-series-channel',
+  templateUrl: './series-channel.component.html',
+  styleUrls: ['./series-channel.component.css']
 })
-export class SeriesByNameComponent implements OnInit {
+export class SeriesChannelComponent implements OnInit {
 
-  parameters:object = {"name":"lost"};
+  parameters:object = {"channel":13,"category":"action"};
   recordSeries:RecordSerie[];
   constructor(private recordSeriesService:RecordSerieService) { }
 
   ngOnInit() {
-    this.recordSeriesService.findSeriesByName(this.parameters)
+    this.recordSeriesService.findSeriesByChannel(this.parameters)
       .then((recordSeries:RecordSerie[])=>{
         this.recordSeries = recordSeries.map((recordSerie)=>{
           return recordSerie;
         });
       });
   }
+
 
 }
